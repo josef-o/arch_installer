@@ -2,6 +2,7 @@ essential,xorg,X server
 essential,xorg-xinit,Display server boot
 essential,man,Manual
 essential,man-pages,Manual pages
+essential,man-db,Manual pages
 network,openssh,Remote login tool for SSH protocol
 network,networkmanager,Network manager
 tools,rsync,Synchronizing files across computers
@@ -13,6 +14,13 @@ tools,udiskie,Automount devices
 tools,xcape,Configure modifier keys to act as other keys
 tools,ripgrep,Faster alternative to grep
 tools,htop,Interactive process viewer
+tools,coreutils,Shell stuff
+tools,gnupg,Security
+tools,jq,JSON parsing
+tools,sed,Streaming editor
+tools,tar,Archiver
+tools,tree,Visor de fs
+tools,unzip,Unzippeador
 tmux,tmux,Terminal multiplexer
 tmux,tmuxp,Configure tmux session + windows + panes via config files
 notifier,dunst,Notification system
@@ -30,9 +38,22 @@ zsh,zsh-completions,Additional completions for Zsh
 zsh,zsh-syntax-highlighting,Syntax highlighting for ZSH
 neovim,neovim,Editor... and much more
 neovim,python-neovim,Python for neovim
+python,python,Python
 js,nodejs,Nodejs (for coc.vim)
 js,yarn,Dependency manager (for coc.vim)
+js,npm,Package installer?
 urxvt,rxvt-unicode,Terminal Urxvt
 firefox,firefox,Browser Firefox
 qutebrowser,qutebrowser,Qutebrowser
 lynx,lynx,Text-based browser
+hardware,bluez,Bluetooth
+hardware,bluez-utils,Bluetooth
+hardware,pulseaudio,Audio server
+hardware,pavucontrol,Pulse audio volume control
+misc,spotify,Spotify
+misc,spotify-tui,Spotify terminal UI
+misc,spotifyd,Spotify daemon
+misc,discord,Discord
+misc,zathura,PDF viewer
+fonts,nerd-fonts-dejavu-complete,DejaVu NF
+fonts,nerd-fonts-source-code-pro,Source Code Pro NF
