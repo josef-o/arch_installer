@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -v
-
 uefi=$(cat /var_uefi)
 hd=$(cat /var_hd)
 
