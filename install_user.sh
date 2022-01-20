@@ -44,8 +44,7 @@ done
 
 DOTFILES="/home/$(whoami)/dotfiles"
 if [ ! -d "$DOTFILES" ]; then
-    git clone https://github.com/josef-o/dotfiles.git \
-    "$DOTFILES" >/dev/null
+    git clone https://github.com/josef-o/dotfiles.git "$DOTFILES"
 fi
 
 source "$DOTFILES/zsh/.zshenv"
