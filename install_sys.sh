@@ -3,7 +3,7 @@
 set -v
 
 # Never run pacman -Sy on your system!
-pacman -Sy dialog
+pacman -Sy --no-confirm dialog
 
 timedatectl set-ntp true
 
@@ -101,9 +101,7 @@ echo "$uefi" > /mnt/var_uefi
 echo "$hd" > /mnt/var_hd
 mv comp /mnt/comp
 
-# Don't forget to replace "Phantas0s" by the username of your Github account
-curl https://raw.githubusercontent.com/josef-o\
-/arch_installer/master/install_chroot.sh > /mnt/install_chroot.sh
+curl https://raw.githubusercontent.com/josef-o/arch_installer/master/install_chroot.sh > /mnt/install_chroot.sh
 
 arch-chroot /mnt bash install_chroot.sh
 

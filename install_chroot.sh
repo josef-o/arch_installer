@@ -83,12 +83,11 @@ dialog --title "Add User" \
 config_user
 
 # Save your username for the next script.
-echo "$name" > /tmp/user_name
+echo "$name" > /user_name
 
 # Ask to install all your apps / dotfiles.
 dialog --title "Continue installation" --yesno \
     "Do you want to install all your apps and your dotfiles?" \
     10 60 \
-    && curl https://raw.githubusercontent.com/josef-o\
-    /arch_installer/master/install_apps.sh > /tmp/install_apps.sh \
-    && bash /tmp/install_apps.sh
+    && curl https://raw.githubusercontent.com/josef-o/arch_installer/master/install_apps.sh > /install_apps.sh \
+    && bash /install_apps.sh

@@ -1,11 +1,10 @@
 #!/bin/bash
 
-name=$(cat /tmp/user_name)
+name=$(cat /user_name)
 
-apps_path="/tmp/apps.csv"
+apps_path="/apps.csv"
 
-curl https://raw.githubusercontent.com/josef-o\
-/arch_installer/master/apps.csv > $apps_path
+curl https://raw.githubusercontent.com/josef-o/arch_installer/master/apps.csv > $apps_path
 
 dialog --title "Welcome!" \
     --msgbox "Welcome to the install script for your apps and dotfiles!" \
@@ -22,10 +21,14 @@ apps=("essential" "Essentials" on
       "zsh" "The Z-Shell (zsh)" on
       "neovim" "Neovim" on
       "urxvt" "URxvt" on
-      "firefox" "Firefox (browser)" off
-      "js" "JavaScript tooling" off
-      "qutebrowser" "Qutebrowser (browser)" off
-      "lynx" "Lynx (browser)" off)
+      "firefox" "Firefox (browser)" on
+      "js" "JavaScript tooling" on
+      "qutebrowser" "Qutebrowser (browser)" on
+      "lynx" "Lynx (browser)" on
+      "hardware" "Hadware" on
+      "fonts" "Fonts" on
+      "misc" "Miscellaneous" on
+      "python" "Python" on)
 
 dialog --checklist \
     "You can now choose what group of application you want to install. \n\n\
@@ -81,8 +84,7 @@ done
 
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
-curl https://raw.githubusercontent.com/josef-o\
-/arch_installer/master/install_user.sh > /tmp/install_user.sh;
+curl https://raw.githubusercontent.com/josef-o/arch_installer/master/install_user.sh > /install_user.sh;
 
 # Switch user and run the final script
-sudo -u "$name" sh /tmp/install_user.sh
+sudo -u "$name" sh /install_user.sh
